@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Model Statistics</title>
+</head>
+<body>
+    <h1>Model Statistics</h1>
+    <ul>
+        <li>Accuracy: {{ stats.accuracy }}%</li>
+        <li>Fake Predictions: {{ stats.fake_count }}</li>
+        <li>Real Predictions: {{ stats.real_count }}</li>
+    </ul>
+    <a href="{{ url_for('dashboard') }}">Back to Dashboard</a>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fake or Real Text Classifier</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Fake or Real Classifier</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/stats">Statistics</a>
+        </nav>
+    </header>
+
+    <main>
+        <form method="POST">
+            <textarea name="text" placeholder="Enter your text here..." required></textarea>
+            <button type="submit">Predict</button>
+        </form>
+        {% if prediction %}
+            <p class="result">Prediction: <strong>{{ prediction }}</strong></p>
+        {% endif %}
+    </main>
+</body>
+</html>
